@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zelda", "Zelda\Zelda.csproj", "{510AEFC0-CA8B-4A4D-8D9A-FDD02C015C2D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Zelda.Tests", "Zelda.Tests\Zelda.Tests.csproj", "{709DFE7E-111B-4094-BC07-46DA1F100E0D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{510AEFC0-CA8B-4A4D-8D9A-FDD02C015C2D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{510AEFC0-CA8B-4A4D-8D9A-FDD02C015C2D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{510AEFC0-CA8B-4A4D-8D9A-FDD02C015C2D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{510AEFC0-CA8B-4A4D-8D9A-FDD02C015C2D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{709DFE7E-111B-4094-BC07-46DA1F100E0D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{709DFE7E-111B-4094-BC07-46DA1F100E0D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{709DFE7E-111B-4094-BC07-46DA1F100E0D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{709DFE7E-111B-4094-BC07-46DA1F100E0D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
