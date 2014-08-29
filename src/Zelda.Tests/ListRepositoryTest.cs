@@ -24,7 +24,7 @@
         public void Simple_Select_With_Integers() {
             var temp = new ListRepository<int>(new List<int> { 1, 2, 3, 4, 5});
 
-            var value = temp.Where(val => val == 2).FirstOrDefault();
+            var value = temp.FirstOrDefault(val => val == 2);
             Assert.AreEqual(value, 2);
         }
 
@@ -40,7 +40,7 @@
         public void Simple_Select_With_Integers_And_No_Match() {
             var temp = new ListRepository<int>(new List<int> { 1, 2, 3, 4, 5 });
 
-            var value = temp.Where(val => val == 9).FirstOrDefault();
+            var value = temp.FirstOrDefault(val => val == 9);
             Assert.AreNotEqual(value, 9);
         }
 

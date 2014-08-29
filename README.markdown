@@ -11,6 +11,8 @@ Simple LINQ-based implementation to the [Repository pattern](http://martinfowler
 ## Source
 1. Clone to repository locally: `git clone git://github.com/lozanotek/zelda.git`
 
-# REQUIREMENTS
+# Targets
+* .NET Framework 3.5
 * .NET Framework 4
+* .NET Framework 4.5
 

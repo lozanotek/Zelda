@@ -9,24 +9,37 @@ namespace Zelda {
     /// <typeparam name="T"></typeparam>
     [Serializable]
     public class ListRepository<T> : RepositoryBase<T> {
-        protected IList<T> InternalList { get; set; }
+        protected List<T> InternalList { get; set; }
 
         /// <summary>
         /// Default constructor
         /// </summary>
-        public ListRepository() : this(new List<T>()) {
+        public ListRepository() {
+            InternalList = new List<T>();
         }
 
         /// <summary>
         /// Constructor with specified value.
         /// </summary>
-        /// <param name="sourceList">Seed value for the repository.  If null, <see cref="ArgumentNullException"/> exception is throw.</param>
+        /// <param name="enumerable">Seed value for the repository. If null, <see cref="ArgumentNullException"/> exception is throw.</param>
+        public ListRepository(IEnumerable<T> enumerable) {
+            if (enumerable == null) {
+                throw new ArgumentNullException("enumerable");
+            }
+
+            InternalList = new List<T>(enumerable);
+        }
+
+        /// <summary>
+        /// Constructor with specified value.
+        /// </summary>
+        /// <param name="sourceList">Seed value for the repository. If null, <see cref="ArgumentNullException"/> exception is throw.</param>
         public ListRepository(IList<T> sourceList) {
             if (sourceList == null) {
                 throw new ArgumentNullException("sourceList");
             }
 
-            InternalList = sourceList;
+            InternalList = new List<T>(sourceList);
         }
 
         /// <summary>
@@ -50,15 +63,20 @@ namespace Zelda {
         /// </summary>
         /// <param name="entity"></param>
         public override void Update(T entity) {
-            int index = 0;
+            var index = 0;
 
-            for (int i = 0; i < InternalList.Count; i++) {
+            for (var i = 0; i < InternalList.Count; i++) {
                 var temp = InternalList[i];
-
                 var defaultVal = default(T);
-                if (defaultVal.Equals(temp)) continue;
-                if (!temp.Equals(entity)) continue;
-                
+
+                if (defaultVal.Equals(temp)) {
+                    continue;
+                }
+
+                if (!temp.Equals(entity)) {
+                    continue;
+                }
+
                 index = i;
                 break;
             }
@@ -71,7 +89,7 @@ namespace Zelda {
         /// </summary>
         /// <returns></returns>
         public override IQueryable<T> Linq() {
-            return InternalList == null ? null : InternalList.AsQueryable();
+            return InternalList.AsQueryable();
         }
     }
 }

@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+    <metadata>
+        <id>Zelda</id>
+        <version>1.0.0</version>
+        <title>Zelda</title>
+        <authors>jglozano</authors>
+        <owners>jglozano</owners>
+        <requireLicenseAcceptance>false</requireLicenseAcceptance>
+        <summary>Simple library for LINQ-based repository pattern.</summary>
+        <description>Simple library for LINQ-based repository pattern.</description>
+        <copyright>lozanotek, inc. 2011</copyright>
+    </metadata>
+</package>
